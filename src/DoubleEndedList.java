@@ -106,26 +106,14 @@ public class DoubleEndedList {
 		}
 
 		if (current == last) {
-
-			last = current.previous;
-			current.previous = previous;
-
+			removeLast();
 		} else if (current == first) {
-			
-			first = current.next;
-			current.next.previous = null;
-			
+			removeFirst();
 		} else if (current.next != null) {
-
 			previous.next = current.next;
 			current.next.previous = previous;
-
-		} else {
-
-			last = current.previous;
-
-		}
-
+		} 
+		
 	}
 
 	public void displayForwards() {
@@ -176,7 +164,10 @@ public class DoubleEndedList {
 		doubleEndedList.removeFirst();
 		doubleEndedList.removeRecord("C");
 		doubleEndedList.removeRecord("B");
-		doubleEndedList.addFirstPosition("A");
+		doubleEndedList.addFirstPosition("B");
+		doubleEndedList.addFirstPosition("B");
+		doubleEndedList.removeRecord("B");
+		
 		doubleEndedList.displayBackwards();
 	}
 
