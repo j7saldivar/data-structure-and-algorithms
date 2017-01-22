@@ -23,6 +23,6 @@ class Recursion {
 	}
 
 	static double goldenRatio(int number) {
-		return (fibonacci(number) * 1.0) / Recursion.fibonacci(number - 1);
+		return (fibonacci(number) * 1.0) / fibonacci(number - 1);
 	}
 }
