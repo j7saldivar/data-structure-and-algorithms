@@ -4,7 +4,7 @@ class BinaryTree {
 
 	Node root;
 
-	public void addNode(int key, String name) {
+	void addNode(int key, String name) {
 
 		Node newNode = new Node(key, name);
 
@@ -37,7 +37,7 @@ class BinaryTree {
 
 	}
 
-	public Node findNode(int key) {
+	Node findNode(int key) {
 
 		Node focusNode = root;
 
@@ -62,7 +62,7 @@ class BinaryTree {
 
 	}
 
-	public void inOrderTraverseTree(Node focusNode) {
+	void inOrderTraverseTree(Node focusNode) {
 
 		if (focusNode != null) {
 
@@ -74,7 +74,7 @@ class BinaryTree {
 
 	}
 
-	public void preOrderTraverseTree(Node focusNode) {
+	void preOrderTraverseTree(Node focusNode) {
 
 		if (focusNode != null) {
 
@@ -86,7 +86,7 @@ class BinaryTree {
 
 	}
 
-	public void postOrderTraverseTree(Node focusNode) {
+	void postOrderTraverseTree(Node focusNode) {
 
 		if (focusNode != null) {
 

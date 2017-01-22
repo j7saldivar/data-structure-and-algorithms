@@ -2,25 +2,25 @@ package com.algorithms.list;
 
 class LinkedList {
 
-	private List first;
+	private Link first;
 
 	LinkedList() {}
 
-	public boolean isEmpty() {
+	boolean isEmpty() {
 		return first == null;
 	}
 
-	public void push(String name) {
+	void push(String name) {
 
-		List link = new List(name);
+		Link link = new Link(name);
 		link.next = first;
 		first = link;
 
 	}
 
-	public List pop() {
+	Link pop() {
 
-		List link = first;
+		Link link = first;
 
 		if (!isEmpty()) {
 			first = first.next;
@@ -32,9 +32,9 @@ class LinkedList {
 
 	}
 
-	public void display() {
+	void display() {
 
-		List link = first;
+		Link link = first;
 
 		while (link != null) {
 
@@ -50,9 +50,9 @@ class LinkedList {
 		}
 	}
 
-	public List find(String name) {
+	Link find(String name) {
 
-		List link = first;
+		Link link = first;
 
 		if (!isEmpty()) {
 
@@ -78,10 +78,10 @@ class LinkedList {
 
 	}
 
-	public List remove(String name) {
+	Link remove(String name) {
 
-		List current = first;
-		List previous = first;
+		Link current = first;
+		Link previous = first;
 
 		while (!current.name.equalsIgnoreCase(name)) {
 

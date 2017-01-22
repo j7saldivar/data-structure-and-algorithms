@@ -1,16 +1,16 @@
 package com.algorithms.list;
 
-class List {
+class Link {
 
 	String name;
-	List next;
-	List previous;
+	Link next;
+	Link previous;
 
-	List(String name) {
+	Link(String name) {
 		this.name = name;
 	}
 
-	public void display() {
+	void display() {
 		System.out.println("Name: " + name); 
 	}
 

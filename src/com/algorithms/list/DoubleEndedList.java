@@ -2,18 +2,18 @@ package com.algorithms.list;
 
 class DoubleEndedList {
 
-	private List first;
-	private List last;
+	private Link first;
+	private Link last;
 
 	DoubleEndedList() {}
 
-	public boolean isEmpty() {
+	boolean isEmpty() {
 		return first == null;
 	}
 
-	public void addFirst(String name) {
+	void addFirst(String name) {
 
-		List newNode = new List(name);
+		Link newNode = new Link(name);
 
 		if (isEmpty()) {
 			first = newNode;
@@ -26,9 +26,9 @@ class DoubleEndedList {
 
 	}
 
-	public void addLast(String name) {
+	void addLast(String name) {
 
-		List newNode = new List(name);
+		Link newNode = new Link(name);
 
 		if (isEmpty()) {
 			first = newNode;
@@ -41,7 +41,7 @@ class DoubleEndedList {
 
 	}
 
-	public void removeFirst() {
+	void removeFirst() {
 
 		if (!isEmpty()) {
 
@@ -57,7 +57,7 @@ class DoubleEndedList {
 
 	}
 
-	public void removeLast() {
+	void removeLast() {
 
 		if (!isEmpty()) {
 
@@ -73,10 +73,10 @@ class DoubleEndedList {
 
 	}
 
-	public void removeRecord(String name) {
+	void removeRecord(String name) {
 
-		List previous = null;
-		List current = first;
+		Link previous = null;
+		Link current = first;
 
 		while (!current.name.equalsIgnoreCase(name)) {
 
@@ -100,9 +100,9 @@ class DoubleEndedList {
 		
 	}
 
-	public void displayForwards() {
+	void displayForwards() {
 
-		List firstNode = first;
+		Link firstNode = first;
 
 		while (firstNode != null) {
 			firstNode.display();
@@ -111,9 +111,9 @@ class DoubleEndedList {
 
 	}
 
-	public void displayBackwards() {
+	void displayBackwards() {
 
-		List lastNode = last;
+		Link lastNode = last;
 
 		while (lastNode != null) {
 			lastNode.display();
