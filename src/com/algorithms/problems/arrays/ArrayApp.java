@@ -13,7 +13,7 @@ public class ArrayApp {
 
 	public static void main(String[] args) {
 
-		randomPermutations(10).forEach((i) -> System.out.print(i + " "));
+		randomPermutations(10).forEach(i -> System.out.print(i + " "));
 
 	}
 
@@ -33,7 +33,7 @@ public class ArrayApp {
 	public static String[][] flipArray(String[][] s) {
 
 		if (s == null)
-			return null;
+			return new String[0][0];
 
 		for (int i = 0; i < s.length / 2; ++i) {
 
